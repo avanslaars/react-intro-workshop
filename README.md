@@ -38,12 +38,19 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-## Code Snippets
-
-Some things just aren't worth typing as a group, so we have a few snippets here so we can copy/paste and move on with our lives.
 
 ### Initial State
 
-```
+We'll use static values early on in this workshop, so rather than typing this out, we'll just copy and paste these values into the appropriate part of the code.
 
+```
+{
+  todos: [
+    {id:1, name: "Get through some slides", isCompleted: true},
+    {id:2, name: "Learn JSX", isCompleted: false},
+    {id:3, name: "Learn React API", isCompleted: false},
+    {id:4, name: "Profit", isCompleted: false}
+  ],
+  currentTodo: ''
+}
 ```
