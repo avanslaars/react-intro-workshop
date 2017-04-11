@@ -11,7 +11,8 @@ export default class App extends Component {
     super()
     this.state = {
       todos: [],
-      currentTodo: ''
+      currentTodo: '',
+      isLoading: true
     }
 
     this.handleRemove = this.handleRemove.bind(this)
@@ -22,10 +23,10 @@ export default class App extends Component {
     this.handleInputChange = this.handleInputChange.bind(this)
   }
 
-  // componentDidMount() {
-  //   loadTodos()
-  //     .then(todos => this.setState({todos}))
-  // }
+  componentDidMount() {
+    loadTodos()
+      .then(todos => this.setState({todos, isLoading:false}))
+  }
 
   handleRemove(id, evt) {
     evt.preventDefault()
@@ -85,7 +86,7 @@ export default class App extends Component {
         </div>
         <Router>
           <div className="Todo-App">
-
+            {this.state.isLoading ? <h1>Loading...</h1> : null}
             <Switch>
               <Route path='/' exact render={() => <h2>Showing All</h2>}/>
               <Route path='/active' render={() => <h2>Showing Active</h2>}/>
