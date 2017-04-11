@@ -1,0 +1,22 @@
+{
+  "name": "todo_react",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "json-server": "^0.9.6",
+    "prop-types": "^15.5.1",
+    "react-scripts": "0.7.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.4",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-router-dom": "^4.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "api-server": "json-server -p 8080 db.json"
+  }
+}
